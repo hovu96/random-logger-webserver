@@ -6,13 +6,13 @@ do
    I=$(shuf -i 1-4 -n 1)
    D=`date -Iseconds`
    case "$I" in
-      "1") echo "$D ERROR An error is usually an exception that has been caught and not handled."
+      "1") echo "$D GET /index.html HTTP/1.0 200 2326"
       ;;
-      "2") echo "$D INFO This is less important than debug log and is often used to provide context in the current task."
+      "2") echo "$D GET /shop.html HTTP/1.0 200 6842"
       ;;
-      "3") echo "$D WARN A warning that should be ignored is usually at this level and should be actionable."
+      "3") echo "$D POST /checkout HTTP/1.0 200 50"
       ;;
-      "4") echo "$D DEBUG This is a debug log that shows a log that can be ignored."
+      "4") echo "$D GET /products/car.html HTTP/1.0 404 2326"
       ;;
    esac
 done
